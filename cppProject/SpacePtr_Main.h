@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include <c++/memory>
+#include <regex>
+#include <memory> // modules for non standard library pointers
 #include <iosfwd> // the forwards declarations the standard cpp
 #include <c++/bitset>
 using namespace std;
@@ -8,7 +9,17 @@ using namespace std;
 namespace SpacePtr {
 class Main
 {
+  int a;
+
 public:
+  Main () { return; }
+  Main (int a)
+  {
+    a = 1;
+    (*this).a = a;
+    std::cout << "Constructor called" << endl;
+    return;
+  }
   static int func0(){ return 0; }
   void func ()
   {
@@ -111,8 +122,64 @@ delete[] carrots;
     // #include <bitset>
     // bitset<3> bitset{1111111111101010101}; std::cout<<bitset.to_string()<<endl; // 101
 
+    // testing <memory> module // new creates memory on the heap unique_shared_weak_ptr uses them //
+    unique_ptr<char> &ptrUni = *new unique_ptr<char> ();
+    // none of the statements in comments 3 in total works //
+    // unique_ptr<char> ptrUni1 = new char('c'); // unique_ptr<char>& ptrUni1 = *new char('c');
+    // malloc'ed the character inside braces // standard library crap // template'ed the standard // malloc might be a pre processor macro
+    unique_ptr<char> ptrUni0{ new char{ 'c' } }; // unique_ptr<char>& ptrUni1 = *new char(); // unique_ptr<char>& ptrUni1 = *new char{'c'};
+    char heapChar = 's'; // new is called implicitly and assigned results
+    char nonHeapChar{ 's' }; // this ones on the stack
+    char chary = *new char ('s'); // the unique sir pointer is taketh address to my char set in the line beloweth
+    unique_ptr<char> ptrUni1{&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&chary}; // works with all 3 chars defined above
+    // had to explicitly convert the unique sir to address type
+    unique_ptr<char>& ptrUni2 = *new unique_ptr<char>(&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&chary);
+    // making a uniquePtr of pointer to characters // after this arrays must be easy to follow array of arrays uniquePtr[s]
+    char *ptrChary = &chary;
+    unique_ptr<char *> ptrUni3{ &ptrChary };
+    unique_ptr<char *> &ptrUni4 = *new unique_ptr<char *> (&ptrChary);
+
+    std::unique_ptr<double> pdata { std::make_unique<double>(999.0) }; // what ever this is might as well
+
+    // unique pointers to arrays
+    std::unique_ptr<char[6]>& ptrUniArr = *new std::unique_ptr<char[6]>();
+
+    // ptrUni1.get() gives you the address of the pointer
+    std::cout << *ptrUni1.get () << '\t' << chary << endl;
+
+    // creating a pointer on heap instead of stack
+    int *ptrInt = *new int *(0);
+
+    // releasing the Unique Pointer, would give the pointer to char i passed before
+    //ptrUni1.reset (new char{ 'q' }); // smart pointer reset
+    char *chary0 = ptrUni1.release (); // smart pointers release
+    // changing chary0 will change chary
+    *chary0 = *new char ('r'); // this will change the original "chary" value
+    chary0 = new char ('q'); // this will not change the "chary" value
+    // should be ashowing me the address but its showing the value
+    std::cout << chary0 << endl; // q
+    std::cout << chary << endl;  // s // smart pointer changed nothing
+    delete chary0; // safely deleting the raw pointer released by the smart pointer "unique_ptr" = nullPtr
+
+    int dd = 0;
+    int &rdd = dd;
+    int *pdd = &dd;
+    int *prdd = &rdd;
+
+    // using <string>
+    string s = *new string ("s", 0, 1);
+    string s0 = *new string ("str") + *new string ("str") + *new string ("str") + (" " + s);
+    s += *new string ("str") + 'x' + *new string ("str");
+    s += 'x' + *new string ("str") + 'x' + (" " + s) + 'x' + std::to_string (0);
+
+    string text;
+    std::getline (std::cin, text, '#');
+    std::cout<<text<<endl;
+    char t = text[0]; // plain char arrays cannot be stored in containers
 
 
+
+    // Testing the standard library objects cout and its predecessers
     // std::ostream* OS = &std::cout; OS->put('S'); OS->write("Hello", 7);
     // std::basic_ostream<char, std::char_traits<char>>* bOS =  OS; bOS->write("YELLOW", 8);
     // std::ios::~ios_base(); //std::ios_base;

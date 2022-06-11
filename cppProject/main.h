@@ -1,5 +1,6 @@
 extern inline void do_something (void);
 
+
 asm("");
 __asm__("");
 
