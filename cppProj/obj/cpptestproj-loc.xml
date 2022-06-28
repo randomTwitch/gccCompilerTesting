@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 62" line=" 211" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 74" line=" 12" >
+      <vfs_project />
+      <vfs_file>D:\GNATprojects\cppProj\src\SpaceFunc.h</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 73" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\spacefunc.hh</vfs_file>
+    </file_marker>
+    <file_marker column=" 70" line=" 208" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 202" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 216" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 261" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 50" line=" 216" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 226" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 282" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 3" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\execution</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 134" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\GNATprojects\cppProj\src\main.cpp</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 18" line=" 61" >
+      <vfs_project>D:\GNATprojects\cppProj\cpptestproj.gpr</vfs_project>
+      <vfs_file>D:\MinGW\lib\gcc\mingw32\9.2.0\include\c++\iostream</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

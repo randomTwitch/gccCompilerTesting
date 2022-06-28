@@ -1,0 +1,25 @@
+project Cpptestproj is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Main use ("main.cpp");
+   for Languages use ("C++");
+   for Target use "x86-windows";
+
+   package Compiler is
+      for Switches ("main.cpp") use ("-g");
+      for Switches ("c++") use ("-g", "-funroll-loops", "-fPIC", "-pg", "-fprofile-arcs", "-ftest-coverage", "-felide-constructor", "-fconserve-space", "-ffunction-sections", "-fdata-sections");
+   end Compiler;
+
+   package Linker is
+      for Switches ("main.cpp") use ("-g");
+      for Switches ("c++") use ("-fprofile-generate", "-g", "-Wl,--gc-sections");
+   end Linker;
+
+   package Ide is
+      for Vcs_Kind use "Auto";
+      for Vcs_Repository_Root use ".";
+   end Ide;
+
+end Cpptestproj;
+

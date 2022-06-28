@@ -1,0 +1,8 @@
+D:\GNATprojects\cppProj\src\main.cpp:201:2: warning: #warning when have time define macros that warning [-Wcpp]
+  201 | #warning when have time define macros that warning
+      |  ^~~~~~~
+In file included from D:\GNATprojects\cppProj\src\inheritance.hh:1,
+                 from D:\GNATprojects\cppProj\src\main.cpp:2:
+D:\GNATprojects\cppProj\src\spacefunc.hh:221:3: warning: converting 'spacefunc::Main' to a reference to the same type will never use a type conversion operator [-Wclass-conversion]
+  221 |   operator Main & () = delete;
+      |   ^~~~~~~~
